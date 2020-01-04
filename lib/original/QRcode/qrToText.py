@@ -5,7 +5,7 @@ image = Image.open(sys.argv[1])
 image.convert("RGB")
 
 imageSize = image.size
-pixelSize = 10
+pixelSize = 1
 
 white = 255 * 3
 black = 0
