@@ -1,0 +1,3 @@
+challはkeyを使って要素を交換しているだけ
+keyを逆順にして再度暗号化スクリプトに投げてあげるだけでよい
+./chall encrypted.qr deckey out
