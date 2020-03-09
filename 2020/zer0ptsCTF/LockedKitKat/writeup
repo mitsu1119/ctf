@@ -1,0 +1,11 @@
+sudo mount -o loop android.4.4.x86.img /mnt/mymnt
+cd /mnt/mymnt/system
+
+-> We can find gesture.key
+
+[use andriller]
+python -m andriller
+
+Lockscreens -> Gesture Pattern
+	select the gesture.key
+
