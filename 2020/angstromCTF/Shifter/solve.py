@@ -28,7 +28,6 @@ if __name__ == "__main__":
     r = remote("misc.2020.chall.actf.co", 20300)
 
     for i in range(50):
-        sleep(0.4)
         log.info(i + 1)
         r.recvuntil("Shift ")
         x = r.recvline().split()
