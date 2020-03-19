@@ -1,4 +1,4 @@
-# from __future__ import print_function
+from __future__ import print_function
 import random,os,sys,binascii
 from decimal import *
 try:
@@ -7,8 +7,7 @@ except:
 	pass
 getcontext().prec = 1000
 def keystream(key):
-	# random.seed(int(os.environ["seed"]))
-	random.seed(random.randint(1, 9999))
+	random.seed(int(os.environ["seed"]))
 	e = random.randint(100,1000)
 	while 1:
 		d = random.randint(1,100)
@@ -28,11 +27,8 @@ try:
 except:
 	print("bad key")
 else:
-	# flag = binascii.hexlify(os.environ["flag"].encode())
-	flag = b"actf{ueeei}"
-	flag = binascii.hexlify(flag)
+	flag = binascii.hexlify(os.environ["flag"].encode())
 	flag = bin(int(flag,16))[2:].zfill(len(flag)*4)
-	print(flag)
 	ret = ""
 	k = keystream(key)
 	for i in flag:

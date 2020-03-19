@@ -10,32 +10,6 @@ import math
 from fractions import Fraction
 from pwn import *
 
-# Miller Rabin test
-def isPrime(n):
-    if n == 2:
-        return True
-    if n == 1:
-        return False
-    if n & 1 == 0:
-        return False
-
-    d = (n - 1) >> 1
-    while d & 1 == 0:
-        d //= 2
-
-    for i in range(100):
-        a = random.randint(1, n - 1)
-        x = pow(a, d, n)
-        t = d
-
-        while t != n - 1 and x != 1 and x != n - 1:
-            x = pow(x, 2, n)
-            t *= 2
-
-        if x != n - 1 and x & 1 == 0:
-            return False
-    return True
-
 # Euler's totient function
 def phi(n):
     r = process(["./msieve-1.53/msieve", "-v", "-e", "-q", str(n)])
