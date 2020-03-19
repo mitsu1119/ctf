@@ -1,0 +1,36 @@
+[in angstrom shell]
+
+$ /tmp/checker;./califrobnication > /tmp/c2;/tmp/checker
+1584463263
+21478
+1584463263
+21481
+
+
+[in my shell]
+$ scp team5764@shell.actf.co:/tmp/c2 .
+
+$ python solve.py
+i8_4a5_}fdlo91oaeci12c{dcm6atfo4inrncrb0aafftd5_
+
+$ vim solver.c
+...
+int main(int argc, char *argv[]) {
+	FILE *f;
+	char flag[50] = "i8_4a5_}fdlo91oaeci12c{dcm6atfo4inrncrb0aafftd5_";
+	strtok(flag, "\n");
+...
+
+$ python -c "print(1584463263 ^ 21479)"
+1584443000
+
+$ python -c "print(1584463263 ^ 21480)"
+1584442999
+
+$ gcc solver.c -o solver
+
+$ ./solver 1584443000
+Here's your encrypted flag: c_rceafi}c41t58fioor5d9{n4aan2a1a6_bidfolc_ftm0d
+
+$ ./solver 1584442999
+actf{dream_of_califrobnication_1f6d458091cad254}
