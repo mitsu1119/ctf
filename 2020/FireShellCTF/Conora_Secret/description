@@ -1,0 +1,1 @@
+The challenge provide two files: output.txt and chall.py. The python file is a cypher that is clear El Gamal scheme. The only missing info is the two keys of Bob and Alice that can be retrieved using discrete log.
