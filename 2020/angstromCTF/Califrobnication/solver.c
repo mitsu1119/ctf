@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[]) {
 	FILE *f;
-	char flag[50] = "i8_4a5_}fdlo91oaeci12c{dcm6atfo4inrncrb0aafftd5_";
+	char flag[50] = "na{i_t9a5a4d_f5dfim8odofcit}nl1rc1a2a4ofc_b6rc0e";
 	strtok(flag, "\n");
 	// memfrob(&flag, strlen(flag));
 	size_t len = strlen(flag);

