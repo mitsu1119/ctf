@@ -1,0 +1,11 @@
+cocoon-itext-2.1.11.jarは適当にググって持ってきたjarなのでリポジトリにはあげないでおく
+
+gcc test.c
+cp a.out elfjar
+cat cocoon-itext-2.1.11.jar >> elfjar
+
+cp erwin.jpg jpgjar
+cat cocoon-itext-2.1.11.jar >> jpgjar
+
+cp elfjar elfjarpdf
+cat erwin-pdf.pdf >> elfjarpdf
