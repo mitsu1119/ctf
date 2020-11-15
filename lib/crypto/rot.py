@@ -11,6 +11,6 @@ def rot(i, s):
     g = (_rot(i, c) for c in s)
     return "".join(g)
 
-s = sys.argv[1]
+s = input()
 for i in range(26):
     print(rot(i, s))
